@@ -1,0 +1,11 @@
+# Casket — Computationally Efficient Static Ransomware/Malware Detection (Green AI)
+# Python 3.10+ (tested on 3.12). CPU-only; no GPU required.
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+xgboost>=2.0
+lightgbm>=4.0
+catboost>=1.2
+matplotlib>=3.9
+seaborn>=0.13
+psutil>=5.9

@@ -1,0 +1,31 @@
+I realized that the description of the datasets in the project draft as of right now, is... a bit questionable. I noticed a different dataset while sourcing these with a usability rating of 10 on Kaggle. It is attached here. 
+
+If you deem it so, i encourage you to replace the weakest part of the 4 datasets, perhaps one that doesn't quite align with its description or specific purpose, with it. 
+
+
+About Dataset
+Windows Malware Detection Dataset
+
+A dataset for Windows Portable Executable Samples with four feature sets. It contains four CSV files, one CSV file per feature set.
+
+First feature set (DLLs_Imported.csv file) contains the DLLs imported by each malware family. The first column contains SHA256 values, second column contains the label or family type of the malware while the remaining columns list the names of imported DLLs.
+Second feature set (API_Functions.csv files) contains the API functions called by these malware alongwith their SHA256 hash values and labels.
+Third feature set (PE_Header.csv) contains values of 52 fields of PE header. All the fields are labelled in the CSV file.
+Fourth feature set (PE_Section.csv file) contains 9 field values of 10 different PE sections. All the fields are labelled in the CSV file.
+Malware Type / family Labels:
+
+IMPORTANT: only the third feature set has been provided for use, as it most aligns with the project scope.
+
+0=Benign
+
+1=RedLineStealer
+
+2= Downloader
+
+3=RAT
+
+4=BankingTrojan
+
+5=SnakeKeyLogger
+
+6=Spyware

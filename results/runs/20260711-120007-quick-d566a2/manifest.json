@@ -1,0 +1,125 @@
+{
+  "run_id": "20260711-120007-quick-d566a2",
+  "started_at": "2026-07-11T12:00:07Z",
+  "finished_at": "2026-07-11T12:44:38Z",
+  "seed": 42,
+  "hardware": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "processor": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+    "python": "3.13.7",
+    "gpu": false,
+    "logical_cpus": 4
+  },
+  "library_versions": {
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.10",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2",
+    "psutil": "MISSING"
+  },
+  "dataset_hashes": {
+    "D1": {
+      "path": "C:\\Users\\David\\Desktop\\negative\\Casket\\Casket\\Datasets\\Dataset 1 - Mendeley Data\\Ransomware_headers.csv",
+      "sha256": "1d58bfc7085394df6b0327dba26a173fe12989e46e77252ae041164d23f64193",
+      "size_bytes": 5345334
+    },
+    "D2": {
+      "path": "C:\\Users\\David\\Desktop\\negative\\Casket\\Casket\\Datasets\\Dataset 2 - Oriola Kolawole\\pe_headers.csv",
+      "sha256": "cce17e00ae6b987886c19195ccaffcf250ccfc002d16e3d66d700e140f97de53",
+      "size_bytes": 16832234
+    },
+    "D3": {
+      "path": "C:\\Users\\David\\Desktop\\negative\\Casket\\Casket\\Datasets\\Dataset 3 - Joakim Arvidsson\\PE_Header.csv",
+      "sha256": "e5cf998ee3d3348d373ceacdf79cbfe72f36ec23696b3c00d09a65ef4c2988f7",
+      "size_bytes": 7811970
+    },
+    "D4": {
+      "path": "C:\\Users\\David\\Desktop\\negative\\Casket\\Casket\\Datasets\\Dataset 4 - AM\\Malware-Benign.csv",
+      "sha256": "83f8e63fd37b6a3e16a034a679c63f1aa5e58cc3f7cffd762deb4a83296337df",
+      "size_bytes": 6606735
+    }
+  },
+  "config": {
+    "seed": 42,
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "datasets": {
+      "D1": {
+        "name": "Dataset 1 - Mendeley Data",
+        "path": "Dataset 1 - Mendeley Data/Ransomware_headers.csv",
+        "target_col": "GR",
+        "drop_cols": [
+          "ID",
+          "filename",
+          "family",
+          "Unnamed: 0"
+        ],
+        "type": "raw_byte",
+        "multiclass_collapse": false,
+        "task": "ransomware"
+      },
+      "D2": {
+        "name": "Dataset 2 - Oriola Kolawole",
+        "path": "Dataset 2 - Oriola Kolawole/pe_headers.csv",
+        "target_col": "GR",
+        "drop_cols": [
+          "ID",
+          "filename",
+          "family",
+          "Unnamed: 0"
+        ],
+        "type": "raw_byte",
+        "multiclass_collapse": false,
+        "task": "ransomware"
+      },
+      "D3": {
+        "name": "Dataset 3 - Joakim Arvidsson",
+        "path": "Dataset 3 - Joakim Arvidsson/PE_Header.csv",
+        "target_col": "Type",
+        "drop_cols": [
+          "SHA256",
+          "Unnamed: 0"
+        ],
+        "type": "parsed_field",
+        "multiclass_collapse": true,
+        "task": "malware"
+      },
+      "D4": {
+        "name": "Dataset 4 - AM",
+        "path": "Dataset 4 - AM/Malware-Benign.csv",
+        "target_col": "Malware",
+        "drop_cols": [
+          "Hash_md5_Name",
+          "Unnamed: 0"
+        ],
+        "type": "parsed_field",
+        "multiclass_collapse": false,
+        "task": "malware"
+      }
+    },
+    "cross_dataset_pairs": [
+      [
+        "D3",
+        "D4"
+      ],
+      [
+        "D4",
+        "D3"
+      ]
+    ],
+    "hardware_note": "CPU-only commodity endpoint; no GPU/TPU acceleration used."
+  },
+  "command": "C:\\Users\\David\\Desktop\\negative\\Casket\\Casket\\src\\runner.py --quick",
+  "n_models": 10,
+  "datasets": [
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+  ],
+  "n_primary_rows": 40
+}
